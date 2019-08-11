@@ -1,9 +1,6 @@
 package com.wxx.bj.builder;
 
-import lombok.Builder;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 /**
  * BuilderDemo.java
@@ -15,8 +12,9 @@ import lombok.ToString;
 @Getter
 @Setter
 @Builder
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+/*builder注解需要与@AllArgsConstructor(access = AccessLevel.PRIVATE) 配合使用，生成private的构造函数*/
 public class BuilderDemo {
-
     private int id;
 
     private String name;
